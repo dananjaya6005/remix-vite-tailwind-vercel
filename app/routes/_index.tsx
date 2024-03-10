@@ -1,4 +1,7 @@
 import type { MetaFunction } from "@vercel/remix";
+import { Suspense } from "react";
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div className="w-screen min-h-screen bg-blue-200 " style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1 className="text-red-600 font-semibold " >Welcome to Remix js </h1>
       <ul>
         <li>
@@ -36,6 +39,19 @@ export default function Index() {
           </a>
         </li>
       </ul>
+
+      <Suspense   fallback={<div>Loading...</div>}>
+        <AudioPlayer
+          autoPlay
+          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          onPlay={e => console.log("onPlay")}
+          // other props here
+        />
+      </Suspense>
+
+
+
+
     </div>
   );
 }

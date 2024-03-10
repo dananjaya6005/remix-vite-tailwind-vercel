@@ -15,7 +15,8 @@
     "@vercel/analytics": "^1.2.2",
     "isbot": "^4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-h5-audio-player": "^3.9.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.0",
