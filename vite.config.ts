@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import { vercelPreset } from '@vercel/remix/vite';
 import tsconfigPaths from "vite-tsconfig-paths";
 
+
 installGlobals();
 
 export default defineConfig({
