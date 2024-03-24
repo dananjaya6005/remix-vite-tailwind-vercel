@@ -6,6 +6,9 @@ import { Link } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { Calendar } from "~/components/ui/calendar"
 
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+
+
 import {
   Drawer,
   DrawerClose,
@@ -16,6 +19,10 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "~/components/ui/drawer";
+
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const PUBLISHABLE_KEY = "pk_test_bmVhcmJ5LW1hcm1vdC0xMS5jbGVyay5hY2NvdW50cy5kZXYk";
 
 
 
@@ -34,7 +41,7 @@ export default function Index() {
 
   return (
     <div className="w-screen min-h-screen  " style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1 className="text-red-800 font-semibold text-xl " >Welcome to Remix js da </h1>
+      <h1 className="text-amber-500 font-semibold text-xl " >Welcome to Remix js da </h1>
 
       <ul>
         <li>
@@ -103,6 +110,8 @@ export default function Index() {
     </DrawerFooter>
   </DrawerContent>
 </Drawer>
+ 
+ 
 
 
     </div>
